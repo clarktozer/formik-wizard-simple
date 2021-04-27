@@ -14,8 +14,8 @@ export function Wizard<T>({
     initialStep = 0,
     ...rest
 }: WizardProps<T>) {
-    const steps = React.Children.toArray(children) as React.ReactElement<StepProps<T>>[];
     const [step, setStep] = useState(initialStep);
+    const steps = React.Children.toArray(children) as React.ReactElement<StepProps<T>>[];
     const stepNode = steps[step];
     const isLastStep = step === steps.length - 1;
 
