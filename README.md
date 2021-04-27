@@ -35,7 +35,7 @@ const App: FC = () => {
 
 | option              | default | Description                                                                                   |
 | ------------------- | ------- | --------------------------------------------------------------------------------------------- |
-| resetTouchedOnStep? | false   | When moving between steps reset the touched elements.                                         |
+| resetTouchedOnStep? | false   | When moving between steps, reset the touched elements.                                         |
 | initialStep?        | 0       | Set the initial step.                                                                         |
 | onRenderStepper?    | -       | React component for displaying a stepper or any other element.                                |
 | onRenderActions     | -       | React component for displaying the buttons needed to move between steps or any other element. |
@@ -111,7 +111,7 @@ const App: FC = () => {
 
 ## useWizard
 
-A React hook for getting the current state of the Wizard. This hook is will primarily be used in the onRenderActions and onRenderStepper components like the example below.
+A React hook for getting the current state of the Wizard. This hook will primarily be used in the onRenderActions and onRenderStepper components like the example below.
 
 ```js
 import React, { FC } from "react";
