@@ -33,9 +33,11 @@ const App: FC = () => {
 
 #### Options:
 
+Takes all properties of the FormikConfig except for the validationSchema which is at the Wizard.Step level. Below is a list of addtional properties.
+
 | option              | default | Description                                                                                   |
 | ------------------- | ------- | --------------------------------------------------------------------------------------------- |
-| resetTouchedOnStep? | false   | When moving between steps, reset the touched elements.                                         |
+| resetTouchedOnStep? | false   | When moving between steps, reset the touched elements.                                        |
 | initialStep?        | 0       | Set the initial step.                                                                         |
 | onRenderStepper?    | -       | React component for displaying a stepper or any other element.                                |
 | onRenderActions     | -       | React component for displaying the buttons needed to move between steps or any other element. |

@@ -1,6 +1,6 @@
 {
     "name": "formik-wizard-simple",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Multi-step form wizard with Formik",
     "main": "lib/index.js",
     "types": "./lib",
@@ -17,7 +17,8 @@
     "keywords": [
         "react",
         "typescript",
-        "formik"
+        "formik",
+        "yup"
     ],
     "author": "Clark Tozer <clarkwtozer@gmail.com>",
     "license": "MIT",
