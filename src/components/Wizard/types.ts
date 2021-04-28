@@ -1,4 +1,4 @@
-import { FormikConfig } from "formik";
+import { FormikConfig, FormikFormProps } from "formik";
 import { ReactNode } from "react";
 import { StepProps } from "../Step/types";
 
@@ -8,4 +8,5 @@ export interface WizardProps<T> extends Omit<FormikConfig<T>, "validationSchema"
     onRenderActions: ReactNode;
     onRenderStepper?: ReactNode;
     initialStep?: number;
+    formProps?: FormikFormProps;
 }

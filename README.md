@@ -41,6 +41,7 @@ Takes all properties of the FormikConfig except for the validationSchema which i
 | initialStep?        | 0       | Set the initial step.                                                                         |
 | onRenderStepper?    | -       | React component for displaying a stepper or any other element.                                |
 | onRenderActions     | -       | React component for displaying the buttons needed to move between steps or any other element. |
+| formProps?          | -       | FormikFormProps for the Form element.                                                         |
 
 ## Wizard.Step
 

@@ -12,6 +12,7 @@ export function Wizard<T>({
     onRenderActions,
     onRenderStepper,
     initialStep = 0,
+    formProps,
     ...rest
 }: WizardProps<T>) {
     const [step, setStep] = useState(initialStep);
@@ -43,7 +44,7 @@ export function Wizard<T>({
 
     return (
         <Formik {...rest} onSubmit={onHandleSubmit} validationSchema={stepNode.props.validationSchema}>
-            <Form>
+            <Form {...formProps}>
                 <WizardContext.Provider
                     value={{
                         isLastStep,
