@@ -3,7 +3,9 @@
 ![CI Status](https://img.shields.io/github/workflow/status/clarktozer/formik-wizard-simple/CI)
 [![npm version](https://img.shields.io/npm/v/formik-wizard-simple.svg)](https://www.npmjs.com/package/formik-wizard-simple)
 
-Multi-step form wizard with Formik.
+Simple multi-step form wizard with Formik.
+
+You are required to implement the stepper, plus the next and previous buttons yourself for flexibility of the UI.
 
 Only peer dependencies are React and Formik.
 
