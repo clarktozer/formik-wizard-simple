@@ -26,8 +26,9 @@ const App: FC = () => {
                 lastName: ""
             }}
             onSubmit={onSubmit}
-            onRenderActions={<Actions />}
-            onRenderStepper={<Stepper />}
+            onRenderAfterStep={<Actions />}
+            onRenderBeforeStep={<Stepper />}
+            resetTouchedOnMove
         >
             {...}
         </Wizard>
@@ -41,10 +42,10 @@ Takes all properties of the FormikConfig except for the validationSchema which i
 
 | option              | default | Description                                                                                   |
 | ------------------- | ------- | --------------------------------------------------------------------------------------------- |
-| resetTouchedOnStep? | false   | When moving between steps, reset the touched elements.                                        |
+| resetTouchedOnMove? | false   | When moving between steps, reset the touched elements.                                        |
 | initialStep?        | 0       | Set the initial step.                                                                         |
-| onRenderStepper?    | -       | React component for displaying a stepper or any other element.                                |
-| onRenderActions     | -       | React component for displaying the buttons needed to move between steps or any other element. |
+| onRenderBeforeStep? | -       | React component for displaying a stepper or any other element.                                |
+| onRenderAfterStep   | -       | React component for displaying the buttons needed to move between steps or any other element. |
 | formProps?          | -       | FormikFormProps for the Form element.                                                         |
 
 ## Wizard.Step
@@ -66,8 +67,8 @@ const App: FC = () => {
                 lastName: ""
             }}
             onSubmit={onSubmit}
-            onRenderActions={<Actions />}
-            onRenderStepper={<Stepper />}
+            onRenderAfterStep={<Actions />}
+            onRenderBeforeStep={<Stepper />}
         >
             <Step
                 validationSchema={Yup.object({
@@ -118,7 +119,7 @@ const App: FC = () => {
 
 ## useWizard
 
-A React hook for getting the current state of the Wizard. This hook will primarily be used in the onRenderActions and onRenderStepper components like the example below.
+A React hook for getting the current state of the Wizard. This hook will primarily be used in the onRenderAfterStep and onRenderBeforeStep components like the example below.
 
 ```js
 import React, { FC } from "react";

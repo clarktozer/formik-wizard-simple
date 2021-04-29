@@ -8,9 +8,9 @@ import { WizardProps } from "./types";
 export function Wizard<T>({
     children,
     onSubmit,
-    resetTouchedOnStep = false,
-    onRenderActions,
-    onRenderStepper,
+    resetTouchedOnMove = false,
+    onRenderAfterStep,
+    onRenderBeforeStep,
     initialStep = 0,
     formProps,
     ...rest
@@ -34,7 +34,7 @@ export function Wizard<T>({
         if (isLastStep) {
             onSubmit(values, helpers);
         } else {
-            if (resetTouchedOnStep) {
+            if (resetTouchedOnMove) {
                 helpers.setTouched({});
             }
 
@@ -54,9 +54,9 @@ export function Wizard<T>({
                         onSetStep
                     }}
                 >
-                    {onRenderStepper}
+                    {onRenderBeforeStep}
                     {stepNode}
-                    {onRenderActions}
+                    {onRenderAfterStep}
                 </WizardContext.Provider>
             </Form>
         </Formik>
