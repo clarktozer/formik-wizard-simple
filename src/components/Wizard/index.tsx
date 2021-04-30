@@ -22,9 +22,10 @@ export function Wizard<T>({
 
     const onSetStep = (value: number) => setStep(value);
 
-    const onNextStep = () => onSetStep(Math.min(step + 1, steps.length - 1));
-
-    const onPreviousStep = () => onSetStep(Math.max(step - 1, 0));
+    const onNextStep = () =>
+      setStep((current) => Math.min(current + 1, steps.length - 1));
+  
+    const onPreviousStep = () => setStep((current) => Math.max(current - 1, 0));
 
     const onHandleSubmit = async (values: T, helpers: FormikHelpers<T>) => {
         if (stepNode.props.onSubmit) {
