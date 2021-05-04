@@ -1,6 +1,6 @@
 {
     "name": "formik-wizard-simple",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Multi-step form wizard with Formik",
     "main": "lib/index.js",
     "types": "./lib",

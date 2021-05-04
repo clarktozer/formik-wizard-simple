@@ -4,4 +4,5 @@ export interface WizardContextProps {
     onNextStep: () => void;
     onPreviousStep: () => void;
     onSetStep: (value: number) => void;
+    totalSteps: number;
 }

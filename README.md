@@ -160,10 +160,11 @@ export const Stepper: FC = () => {
 
 #### Properties:
 
-| option         | default | Description                   |
-| -------------- | ------- | ----------------------------- |
-| step           | 0       | The current step.             |
-| isLastStep     | -       | Is the current step the last. |
-| onNextStep     | -       | Move to the next step.        |
-| onPreviousStep | -       | Go back to the previous step. |
-| onSetStep      | -       | Go to any step.               |
+| option         | default | Description                       |
+| -------------- | ------- | --------------------------------- |
+| step           | 0       | The current step.                 |
+| isLastStep     | -       | Is the current step the last.     |
+| onNextStep     | -       | Move to the next step.            |
+| onPreviousStep | -       | Go back to the previous step.     |
+| onSetStep      | -       | Go to any step.                   |
+| totalSteps     | -       | Count of step children components |

@@ -52,7 +52,8 @@ export function Wizard<T>({
                         onNextStep,
                         onPreviousStep,
                         step,
-                        onSetStep
+                        onSetStep,
+                        totalSteps: steps.length
                     }}
                 >
                     {onRenderBeforeStep}
