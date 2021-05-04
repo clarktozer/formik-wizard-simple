@@ -116,6 +116,7 @@ const App: FC = () => {
 | ----------------- | ------- | -------------------------------------------------------------------------- |
 | onSubmit?         | -       | Called whenever the submit/next button is clicked with the current values. |
 | validationSchema? | -       | Yup schema for validating the step.                                        |
+| id?               | -       | Optional id for the step. Useful for when using nested validation schemas. |
 
 ## useWizard
 
@@ -160,11 +161,12 @@ export const Stepper: FC = () => {
 
 #### Properties:
 
-| option         | default | Description                       |
-| -------------- | ------- | --------------------------------- |
-| step           | 0       | The current step.                 |
-| isLastStep     | -       | Is the current step the last.     |
-| onNextStep     | -       | Move to the next step.            |
-| onPreviousStep | -       | Go back to the previous step.     |
-| onSetStep      | -       | Go to any step.                   |
-| totalSteps     | -       | Count of step children components |
+| option         | default | Description                          |
+| -------------- | ------- | ------------------------------------ |
+| step           | 0       | The current step.                    |
+| isLastStep     | -       | Is the current step the last.        |
+| onNextStep     | -       | Move to the next step.               |
+| onPreviousStep | -       | Go back to the previous step.        |
+| onSetStep      | -       | Go to any step.                      |
+| totalSteps     | -       | Count of step children components    |
+| stepId?        | -       | id property of the current step node |
