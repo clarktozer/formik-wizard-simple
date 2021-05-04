@@ -40,13 +40,14 @@ const App: FC = () => {
 
 Takes all properties of the FormikConfig except for the validationSchema which is at the Wizard.Step level. Below is a list of addtional properties.
 
-| option              | default | Description                                                                                   |
-| ------------------- | ------- | --------------------------------------------------------------------------------------------- |
-| resetTouchedOnMove? | false   | When moving between steps, reset the touched elements.                                        |
-| initialStep?        | 0       | Set the initial step.                                                                         |
-| onRenderBeforeStep? | -       | React component for displaying a stepper or any other element.                                |
-| onRenderAfterStep   | -       | React component for displaying the buttons needed to move between steps or any other element. |
-| formProps?          | -       | FormikFormProps for the Form element.                                                         |
+| option                  | default | Description                                                                                   |
+| ----------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| resetTouchedOnMove?     | false   | When moving between steps, reset the touched elements.                                        |
+| resetSubmitCountOnMove? | false   | When moving between steps, reset the submit count of the formik form to 0.                    |
+| initialStep?            | 0       | Set the initial step.                                                                         |
+| onRenderBeforeStep?     | -       | React component for displaying a stepper or any other element.                                |
+| onRenderAfterStep       | -       | React component for displaying the buttons needed to move between steps or any other element. |
+| formProps?              | -       | FormikFormProps for the Form element.                                                         |
 
 ## Wizard.Step
 

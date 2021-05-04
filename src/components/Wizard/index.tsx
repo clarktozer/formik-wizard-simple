@@ -9,6 +9,7 @@ export function Wizard<T>({
     children,
     onSubmit,
     resetTouchedOnMove = false,
+    resetSubmitCountOnMove = false,
     onRenderAfterStep,
     onRenderBeforeStep,
     initialStep = 0,
@@ -36,6 +37,12 @@ export function Wizard<T>({
         } else {
             if (resetTouchedOnMove) {
                 helpers.setTouched({});
+            }
+
+            if (resetSubmitCountOnMove) {
+                helpers.resetForm({
+                    submitCount: 0
+                });
             }
 
             onNextStep();
